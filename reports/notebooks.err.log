@@ -1,0 +1,64 @@
+Traceback (most recent call last):
+  File "C:\Users\kathy\miniconda3\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "C:\Users\kathy\miniconda3\Lib\site-packages\nbclient\client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kathy\miniconda3\Lib\site-packages\jupyter_core\utils\__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kathy\miniconda3\Lib\asyncio\base_events.py", line 685, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\kathy\miniconda3\Lib\site-packages\nbclient\client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\kathy\miniconda3\Lib\site-packages\nbclient\client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\kathy\miniconda3\Lib\site-packages\nbclient\client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import psycopg2
+import pandas as pd 
+import kaleido
+from sqlalchemy import create_engine
+import numpy as np
+import plotly.graph_objects as go
+import sklearn.metrics
+from sklearn.metrics import auc
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.model_selection import train_test_split
+from scipy.stats import kstest
+import statsmodels.api as sm
+import statsmodels.graphics.tsaplots as tsaplots
+import scipy.stats as stats
+
+from sklearn.model_selection import train_test_split, GridSearchCV, KFold,validation_curve
+
+from sklearn.pipeline import Pipeline
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import StandardScaler,LabelEncoder,RobustScaler
+
+from sklearn.compose import ColumnTransformer
+from sklearn.neighbors import KNeighborsClassifier
+
+from sklearn.metrics import classification_report, ConfusionMatrixDisplay,confusion_matrix
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+
+import matplotlib.pyplot as plt
+
+------------------
+
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [1;32mIn[1], line 13[0m
+[0;32m     11[0m [38;5;28;01mfrom[39;00m [38;5;21;01msklearn[39;00m[38;5;21;01m.[39;00m[38;5;21;01mmodel_selection[39;00m [38;5;28;01mimport[39;00m train_test_split
+[0;32m     12[0m [38;5;28;01mfrom[39;00m [38;5;21;01mscipy[39;00m[38;5;21;01m.[39;00m[38;5;21;01mstats[39;00m [38;5;28;01mimport[39;00m kstest
+[1;32m---> 13[0m [38;5;28;01mimport[39;00m [38;5;21;01mstatsmodels[39;00m[38;5;21;01m.[39;00m[38;5;21;01mapi[39;00m [38;5;28;01mas[39;00m [38;5;21;01msm[39;00m
+[0;32m     14[0m [38;5;28;01mimport[39;00m [38;5;21;01mstatsmodels[39;00m[38;5;21;01m.[39;00m[38;5;21;01mgraphics[39;00m[38;5;21;01m.[39;00m[38;5;21;01mtsaplots[39;00m [38;5;28;01mas[39;00m [38;5;21;01mtsaplots[39;00m
+[0;32m     15[0m [38;5;28;01mimport[39;00m [38;5;21;01mscipy[39;00m[38;5;21;01m.[39;00m[38;5;21;01mstats[39;00m [38;5;28;01mas[39;00m [38;5;21;01mstats[39;00m
+
+[1;31mModuleNotFoundError[0m: No module named 'statsmodels'
+
